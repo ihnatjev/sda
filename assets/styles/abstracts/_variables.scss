@@ -1,0 +1,69 @@
+// Colors
+$color-black: #000 !default;
+$color-white: #fff !default;
+$color-dark: #313E57;
+$color-darker: rgb(37, 40, 41);
+$color-primary: #D9C07E;
+$color-primary-light: #DECB96;
+$color-primary-dark: #C9B37B;
+$color-secondary: #82AD4C;
+$color-secondary-light: #8EB55E;
+$color-secondary-dark: #759C45;
+$color-faded-darker: #ADB2BC;
+$color-faded-dark: #D6D8DD;
+$color-faded-medium: #EBECEF;
+$color-faded-light: #F4F5F6;
+
+// Base variables
+$base-font-size: 16px !default;
+$base-line-height: 1.5 !default;
+$base-animation-duration: 1s !default;
+$animation-duration: 0.3s !default;
+
+// Relative or absolute URL where all assets are served from
+$base-assets-url: '/assets/' !default;
+
+// Fonts
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
+$font-display: block !default;
+
+// Body
+$body-font-size: $base-font-size !default;
+$body-font-weight: $font-weight-medium !default;
+$body-line-height: $base-line-height !default;
+$body-color: rgb(49, 62, 87) !default;
+$body-bg-color: $color-white!default;
+
+// Links
+$link-decoration: none !default;
+$link-hover-decoration: underline !default;
+
+// Headings
+$headings-font-weight: $font-weight-bold !default;
+$headings-line-height: 1.15 !default;
+$headings-color: null !default;
+
+$h1-font-size: $base-font-size * 2.25 !default;
+$h2-font-size: $base-font-size * 1.75 !default;
+$h3-font-size: $base-font-size * 1.5 !default;
+$h4-font-size: $base-font-size * 1.25 !default;
+$h5-font-size: $base-font-size !default;
+$h6-font-size: $base-font-size * 0.875 !default;
+
+// Subheadings
+$s1-font-size: $base-font-size * 2 !default;
+$s2-font-size: $base-font-size * 1.5 !default;
+$s3-font-size: $base-font-size * 1.25 !default;
+$s4-font-size: $base-font-size * 1 !default;
+$s5-font-size: $base-font-size * 0.875 !default;
+$s6-font-size: $base-font-size * 0.75 !default;
+
+// Container's maximum width
+$container-max-width: 1280px !default;
+
+// Grid System
+$grid-columns: 12 !default;
+
+//
+$base-box-shadow: 0 0 6px -3px;

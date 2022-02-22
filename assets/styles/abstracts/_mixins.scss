@@ -1,0 +1,93 @@
+// Block Element
+@mixin element($element) {
+  &__#{$element} {
+      @content;
+  }
+}
+
+// Block Modifier
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+      @content;
+  }
+}
+
+// Event Wrapper
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+// Font Face
+@mixin font-face($family, $name, $weight, $style: normal, $display: $font-display) {
+  @font-face {
+    font: {
+      family: quote($family);
+      weight: $weight;
+      style: $style;
+      display: $display;
+    }
+    src: font('#{$name}.woff2') format('woff2');
+  }
+}
+
+// Media Breakpoint
+@mixin media-breakpoint($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+}
+
+// Button
+@mixin button-base {
+  background-color: transparent;
+  border: none;
+  text: {
+    align: center;
+    decoration: none;
+  }
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include on-event {
+    text-decoration: $link-decoration;
+  }
+}
+
+// Flex
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

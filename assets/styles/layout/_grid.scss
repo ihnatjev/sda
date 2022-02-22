@@ -1,0 +1,32 @@
+/*
+ * Grid
+ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat($grid-columns,  1fr);
+
+  // Columns
+  @for $i from 1 through $grid-columns {
+    @include element('col-#{$i}') {
+      grid-column: span $i;
+    }
+  }
+
+  // Columns for
+  @include media-breakpoint('tablet') {
+    @for $i from 1 through $grid-columns {
+      @include element('col-tb-#{$i}') {
+        grid-column: span $i;
+      }
+    }
+  }
+
+  // Columns for mobile
+  @include media-breakpoint('mobile') {
+    @for $i from 1 through $grid-columns {
+      @include element('col-mb-#{$i}') {
+        grid-column: span $i;
+      }
+    }
+  }
+}

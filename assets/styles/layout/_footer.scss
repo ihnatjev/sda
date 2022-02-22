@@ -1,0 +1,85 @@
+/*
+ * Footer
+ */
+.site-footer {
+  background-color: $color-darker;
+  height: 110px;
+  display: flex;
+  align-items: center;
+
+  // Container
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // Brand
+  @include element('brand') {
+    text-decoration: none;
+    background: image('logo-light.svg') no-repeat;
+    background-size: cover;
+    width: 140px;
+    height: 60px;
+    display: block;
+
+    @include media-breakpoint('mobile') {
+      background-image: image('logo-white-small.svg');
+      width: 120px;
+      height: 52px;
+    }
+  }
+
+  // Text
+  @include element('text') {
+    color: $color-faded-darker;
+    font-size: $s6-font-size;
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  // Phone
+  @include element('phone') {
+    color: $color-white;
+    display: flex;
+
+    // Icon
+    @include element('icon') {
+      margin-right: 8px;
+
+      @include media-breakpoint('mobile') {
+        display: none;
+      }
+    }
+
+    // Number
+    @include element('number') {
+
+      a {
+        color: $color-white;
+        text-decoration: none;
+        font: {
+          size: $s2-font-size;
+          family: 'Mariupol', sans-serif;
+        }
+        line-height: 28px;
+        margin-bottom: 0;
+        display: block;
+
+        @include media-breakpoint('mobile') {
+          font-size: $s4-font-size;
+        }
+      }
+
+      span {
+        display: inline-block;
+
+        text-transform: lowercase;
+        font-size: 12px;
+        line-height: 18px;
+        background-color: #82AD4C;
+        padding: 0 8px;
+      }
+    }
+  }
+}
